@@ -12,10 +12,10 @@ import { useSession } from "next-auth/client";
 import { useMediaQuery } from "@material-ui/core";
 import config from "@/components/config";
 import axios from "axios";
-import { useStyles } from "../styles"
+import { useStyles } from "../styles";
 
 const DevicesFilter = (props) => {
-  const classes = useStyles();  
+  const classes = useStyles();
   return (
     <Filter {...props} className={classes.filter}>
       <SelectInput
@@ -141,10 +141,12 @@ export const AssessmentsEdit = (props) => {
   }, []);
   useEffect(() => {
     axios
-      .get(`${process.env.NEXT_PUBLIC_ASSESSMENTS_MODULE_FORM_URL}/getFormPrefilled/${props.id}`)
+      .get(
+        `${process.env.NEXT_PUBLIC_ASSESSMENTS_MODULE_FORM_URL}/getFormPrefilled/${props.id}`
+      )
       .then((res) => setFormUrl(res))
-      .catch((err) => {});    
-  }, []);  
+      .catch((err) => {});
+  }, []);
   return (
     <>
       {formUrl && token && (

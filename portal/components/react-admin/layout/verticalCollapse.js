@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import VerticalItem from "./verticalItem";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -6,10 +6,10 @@ import config from "@/components/config";
 import Login from "./login";
 
 const Home = () => {
-  return (<Login />);
+  return <Login />;
   return (
     <Layout>
-       <div className={styles.grid}>
+      <div className={styles.grid}>
         {config.homepageCards.map((card, index) => {
           return (
             <Link key={index} href={card.target} passHref>
@@ -30,7 +30,7 @@ const Home = () => {
             </Link>
           );
         })}
-      </div> 
+      </div>
     </Layout>
   );
 };

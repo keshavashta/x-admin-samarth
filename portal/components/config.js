@@ -20,14 +20,14 @@ const resourceConfig = {
   ],
   homepageCards: [
     {
-    //   title: {
-    //     en: "Donate your smartphone",
-    //     hi: "अपना स्मार्टफ़ोन दान करें",
-    //   },
-    //   target: "/donate",
-    //   icon: "volunteer_activism",
-    //   colour: "primary",
-    // },{
+      //   title: {
+      //     en: "Donate your smartphone",
+      //     hi: "अपना स्मार्टफ़ोन दान करें",
+      //   },
+      //   target: "/donate",
+      //   icon: "volunteer_activism",
+      //   colour: "primary",
+      // },{
       title: {
         en: "Donate a Smartphone as an Individual Donor",
         hi: "व्यक्तिगत दाता",
@@ -116,7 +116,7 @@ const resourceConfig = {
   statusChoices: [
     {
       id: "PENDING",
-      name: "Pending",//No Action Taken
+      name: "Pending", //No Action Taken
       icon: "warning",
       color: "#FEC400",
     },
@@ -126,7 +126,8 @@ const resourceConfig = {
       icon: "pending_actions",
       color: "#F12B2C",
       templateId: "1007409368881000345",
-      template: "Your registration request for e-Samvad has been rejected. Please contact your school head regarding this matter.\n\nSamagra Shiksha, Himachal Pradesh",
+      template:
+        "Your registration request for e-Samvad has been rejected. Please contact your school head regarding this matter.\n\nSamagra Shiksha, Himachal Pradesh",
     },
     {
       id: "ACTIVE",
@@ -134,7 +135,8 @@ const resourceConfig = {
       icon: "inventory",
       color: "#29CC97",
       templateId: "1007578130357765332",
-      template: "Your registration on e-Samvad has been approved. You can login to the app to access all the features.\n\nSamagra Shiksha, Himachal Pradesh",
+      template:
+        "Your registration on e-Samvad has been approved. You can login to the app to access all the features.\n\nSamagra Shiksha, Himachal Pradesh",
     },
     {
       id: "DEACTIVATED",
@@ -143,25 +145,25 @@ const resourceConfig = {
       color: "#cbcbcb",
     },
   ],
-  jobCadre:[
-    {id:'JBT',name:'JBT'},
-    {id:'Head Teacher',name:'Head Teacher'},
-    {id:'CHT',name:'CHT'},
-    {id:'DPE',name:'DPE'},
-    {id:'C&V',name:'C&V'},
-    {id:'TGT',name:'TGT'},
-    {id:'Lecturer',name:'Lecturer'},
-    {id:'Principal',name:'Principal'},
-    {id:'Head Master',name:'Head Master'},
+  jobCadre: [
+    { id: "JBT", name: "JBT" },
+    { id: "Head Teacher", name: "Head Teacher" },
+    { id: "CHT", name: "CHT" },
+    { id: "DPE", name: "DPE" },
+    { id: "C&V", name: "C&V" },
+    { id: "TGT", name: "TGT" },
+    { id: "Lecturer", name: "Lecturer" },
+    { id: "Principal", name: "Principal" },
+    { id: "Head Master", name: "Head Master" },
   ],
-  modeOfEmployment:[
-    {id:'Permanent',name:'Permanent'},
-    {id:'Contractual',name:'Contractual'},
-    {id:'Others',name:'Others'},
+  modeOfEmployment: [
+    { id: "Permanent", name: "Permanent" },
+    { id: "Contractual", name: "Contractual" },
+    { id: "Others", name: "Others" },
   ],
-  isEnabled:[
-    {id:'false',name:'false'},
-    {id:'true',name:'true'},
+  isEnabled: [
+    { id: "false", name: "false" },
+    { id: "true", name: "true" },
   ],
   deliveryTypeChoices: [
     { id: "hand", name: "Hand Off", filterable: true },
@@ -171,8 +173,8 @@ const resourceConfig = {
     { id: "couriernonhp", name: "Courier (outside HP)" },
   ],
   schoolSession: [
-    {id:'S',name:'Summer'},
-    {id:'W',name:'Winter'}
+    { id: "S", name: "Summer" },
+    { id: "W", name: "Winter" },
   ],
   gradeChoices: [
     {

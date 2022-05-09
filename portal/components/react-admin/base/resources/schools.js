@@ -27,7 +27,7 @@ import BackButton from "../components/BackButton";
 import config from "@/components/config";
 import sendSMS from "@/utils/sendSMS";
 import buildGupshup from "@/utils/buildGupshup";
-import { useStyles } from "../styles"
+import { useStyles } from "../styles";
 
 /**
  * Donate Device Request List
@@ -46,10 +46,7 @@ export const SchoolList = (props) => {
       exporter={false}
     >
       {isSmall ? (
-        <SimpleList
-          primaryText={(record) => record.name}
-          linkType="edit"
-        />
+        <SimpleList primaryText={(record) => record.name} linkType="edit" />
       ) : (
         <Datagrid rowClick="edit">
           <TextField label="UDISE" source="udise" />
@@ -61,7 +58,9 @@ export const SchoolList = (props) => {
           <FunctionField
             label="Session"
             render={(record) => {
-              const obj = config.schoolSession.find((elem) => elem.id === record.session);
+              const obj = config.schoolSession.find(
+                (elem) => elem.id === record.session
+              );
               return obj?.name;
             }}
           />
@@ -114,8 +113,7 @@ export const SchoolEdit = (props) => {
   const Title = ({ record }) => {
     return (
       <span>
-        Edit school{" "}
-        <span className={classes.grey}>#{record.udise}</span>
+        Edit school <span className={classes.grey}>#{record.udise}</span>
       </span>
     );
   };
@@ -148,7 +146,9 @@ export const SchoolEdit = (props) => {
             <FunctionField
               label="Session"
               render={(record) => {
-                const obj = config.schoolSession.find((elem) => elem.id === record.session);
+                const obj = config.schoolSession.find(
+                  (elem) => elem.id === record.session
+                );
                 return obj?.name;
               }}
             />

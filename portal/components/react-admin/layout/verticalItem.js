@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import SmartphoneIcon from "@material-ui/icons/Smartphone";
 import SchoolIcon from "@material-ui/icons/School";
-import PersonIcon from '@material-ui/icons/Person';
-import PieChartIcon from '@material-ui/icons/PieChart';
+import PersonIcon from "@material-ui/icons/Person";
+import PieChartIcon from "@material-ui/icons/PieChart";
 
 const useStyles = makeStyles((theme) => ({
   sidebarItem: {

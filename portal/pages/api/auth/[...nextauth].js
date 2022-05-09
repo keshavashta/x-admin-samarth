@@ -46,7 +46,7 @@ export default NextAuth({
     jwt: true,
   },
   callbacks: {
-    redirect(url, baseUrl) {     
+    redirect(url, baseUrl) {
       return url;
     },
     async jwt(token, user, account, profile, isNewUser) {
@@ -56,7 +56,7 @@ export default NextAuth({
           element?.applicationId ==
           process.env.NEXT_PUBLIC_FUSIONAUTH_SCHOOL_APP_ID
       );
-      if (account && registrationElement) {        
+      if (account && registrationElement) {
         token.username = profile.user?.username;
         token.fullName = profile.user?.fullName;
         token.role = registrationElement[0]?.roles[0];
@@ -70,8 +70,8 @@ export default NextAuth({
       session.role = token.role;
       session.fullName = token.fullName;
       session.username = token.username;
-      session.applicationId = token.applicationId;      
+      session.applicationId = token.applicationId;
       return session;
-    },    
+    },
   },
 });

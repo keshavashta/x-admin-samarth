@@ -7,7 +7,7 @@ import styles from "../../styles/Login.module.css";
 
 export default function Login(props) {
   const { persona } = props;
-  const [input, setInput] = useState({});  
+  const [input, setInput] = useState({});
 
   const router = useRouter();
   const [inputValidity, setInputValidity] = useState(
@@ -91,7 +91,7 @@ export default function Login(props) {
             pattern={control.pattern}
             onChange={handleInput}
           />
-        ))}        
+        ))}
         <button
           autoComplete="off"
           disabled={!formValidity}

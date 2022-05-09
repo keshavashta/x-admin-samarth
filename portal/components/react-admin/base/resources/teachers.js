@@ -22,13 +22,13 @@ import {
 } from "react-admin";
 
 import { useSession } from "next-auth/client";
-import { Typography, useMediaQuery, Chip} from "@material-ui/core";
+import { Typography, useMediaQuery, Chip } from "@material-ui/core";
 import EditNoDeleteToolbar from "../components/EditNoDeleteToolbar";
 import BackButton from "../components/BackButton";
 import config from "@/components/config";
 import sendSMS from "@/utils/sendSMS";
 import buildGupshup from "@/utils/buildGupshup";
-import { useStyles } from "../styles"
+import { useStyles } from "../styles";
 
 const getChoice = (choices, id) => {
   return choices?.find((elem) => elem.id === id);
@@ -69,9 +69,16 @@ export const TeacherList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const classes = useStyles();
 
-  const ColoredChipField = props => {
-    let data = config.statusChoices.find((elem) => elem.id === props.record[props.source]);
-    return (<Chip style={{backgroundColor:data?.color,color:'#FFF'}} label={data?.name} />);
+  const ColoredChipField = (props) => {
+    let data = config.statusChoices.find(
+      (elem) => elem.id === props.record[props.source]
+    );
+    return (
+      <Chip
+        style={{ backgroundColor: data?.color, color: "#FFF" }}
+        label={data?.name}
+      />
+    );
   };
 
   return (
@@ -80,7 +87,7 @@ export const TeacherList = (props) => {
       bulkActionButtons={false}
       title="Employees list"
       className={isSmall ? classes.smList : classes.list}
-      filters={<DevicesFilter  />}
+      filters={<DevicesFilter />}
       exporter={false}
     >
       {isSmall ? (
@@ -93,8 +100,16 @@ export const TeacherList = (props) => {
       ) : (
         <Datagrid rowClick="edit">
           <TextField label="Username" source="user.username" sortable={false} />
-          <TextField label="Employee Name" source="user.first_name" sortable={false} />
-          <TextField label="Contact Number" source="user.mobile_phone" sortable={false} />
+          <TextField
+            label="Employee Name"
+            source="user.first_name"
+            sortable={false}
+          />
+          <TextField
+            label="Contact Number"
+            source="user.mobile_phone"
+            sortable={false}
+          />
           <TextField label="Mode of employement" source="employment" />
           <TextField label="Designation" source="designation" />
           <ColoredChipField label="Account Status" source="account_status" />
@@ -129,7 +144,11 @@ export const TeacherEdit = (props) => {
       if (template && session.role) {
         //get each variable (which could be a path, like "ab.cd"), and replace it with
         //the appropriate value from the data object
-        const response = await sendSMS(template, templateId, data.user.mobile_phone);
+        const response = await sendSMS(
+          template,
+          templateId,
+          data.user.mobile_phone
+        );
         if (response?.success) notify(response.success, "info");
         else if (response?.error) notify(response.error, "warning");
         redirect("list", props.basePath, data.id, data);

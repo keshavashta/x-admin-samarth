@@ -4,18 +4,18 @@ import gql from "graphql-tag";
 export const EXTENDED_ASSESSMENT_RECORD = gql`
   {
     id
-    assessment_type{
+    assessment_type {
       name
     }
-    deadline{
+    deadline {
       district
       date
     }
-    submissionTypeBySubmissionTypeV2Id{
+    submissionTypeBySubmissionTypeV2Id {
       aggregation
       category
     }
     evaluation_params
-    is_enabled  
+    is_enabled
   }
 `;

@@ -4,9 +4,9 @@ import gql from "graphql-tag";
 export const EXTENDED_SCHOOL_RECORD = gql`
   {
     location {
-        district
-        cluster
-        block
+      district
+      cluster
+      block
     }
   }
 `;

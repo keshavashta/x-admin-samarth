@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  List,  
+  List,
   SimpleList,
-  Datagrid, 
+  Datagrid,
   TextField,
   ReferenceField,
   DateField,
@@ -11,10 +11,10 @@ import {
   ReferenceInput,
   AutocompleteInput,
   DateInput,
-  Filter  
+  Filter,
 } from "react-admin";
 import { useMediaQuery } from "@material-ui/core";
-import { useStyles } from "../styles"
+import { useStyles } from "../styles";
 
 // school renderer
 const schoolRenderer = (choice) => {
@@ -28,7 +28,7 @@ const SearchFilter = (props) => (
       source="school#udise"
       className="searchBar"
       alwaysOn
-    /> 
+    />
     <SelectInput
       label="By Grade Number"
       source="grade_number"
@@ -50,7 +50,7 @@ const SearchFilter = (props) => (
     />
     <TextInput
       placeholder="Assessment Type"
-      source="assessment#assessment_type#name"      
+      source="assessment#assessment_type#name"
       className="filterInput"
       label="Assessment Type"
     />
@@ -60,7 +60,7 @@ const SearchFilter = (props) => (
 export const GradeAssessmentList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const classes = useStyles();
-  // eslint-disable-next-line no-shadow  
+  // eslint-disable-next-line no-shadow
   return (
     <List
       {...props}
@@ -97,14 +97,14 @@ export const GradeAssessmentList = (props) => {
         />
       ) : (
         <Datagrid size="small">
-          <TextField source="id" />          
-          <TextField source="assessment.assessment_type.name" label="Type"/>         
-          <TextField source="school.udise" label="School(UDISE)"/>
+          <TextField source="id" />
+          <TextField source="assessment.assessment_type.name" label="Type" />
+          <TextField source="school.udise" label="School(UDISE)" />
           <TextField source="section" />
           <TextField source="grade_number" />
           <TextField source="streams_id" label="Stream" />
           <DateField source="created" />
-          <DateField source="updated" />          
+          <DateField source="updated" />
         </Datagrid>
       )}
     </List>
