@@ -11,6 +11,7 @@ import {
   AssessmentsList,
 } from "@/components/react-admin/base/resources/assessments";
 import { GradeAssessmentList } from "@/components/react-admin/base/resources/gradeAssessment";
+import { LocationEdit, LocationList } from "../base/resources/location";
 
 export const resourceConfig = [
   {
@@ -44,6 +45,14 @@ export const resourceConfig = [
     edit: null,
     create: null,
     label: "Grade Assessments",
+    icon: "chart",
+  },
+  {
+    name: "location",
+    list: LocationList,
+    edit: LocationEdit,
+    create: null,
+    label: "Location",
     icon: "chart",
   },
 ];

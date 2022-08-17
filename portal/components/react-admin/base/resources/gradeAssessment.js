@@ -4,6 +4,7 @@ import {
   SimpleList,
   Datagrid,
   TextField,
+  TextInput,
   ReferenceField,
   DateField,
   SelectInput,

@@ -3,7 +3,7 @@ import { AdminContext, AdminUI, Resource, useDataProvider } from "react-admin";
 import buildHasuraProvider, { buildFields } from "ra-data-hasura";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { useSession } from "next-auth/client";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import { MuiThemeProvider, createTheme } from "@material-ui/core";
 import customTheme from "./theme";
 import customLayout from "./layout/";
 import customFields from "./customHasura/customFields";
@@ -60,7 +60,7 @@ function AsyncResources({ client }) {
   }
   if (!resources) return null;
   return (
-    <MuiThemeProvider theme={createMuiTheme(customTheme)}>
+    <MuiThemeProvider theme={createTheme(customTheme)}>
       <AdminUI disableTelemetry loginPage={false} layout={customLayout}>
         {filteredResources.map((resource) => (
           <Resource
