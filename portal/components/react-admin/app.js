@@ -53,6 +53,7 @@ function AsyncResources({ client }) {
       ?.map((elem) => elem.name);
   const resources = resourceConfig;
   let filteredResources = resources;
+  console.log(client.cache?.data?.data?.ROOT_QUERY, "permission");
   if (introspectionResultObjects) {
     filteredResources = resources.filter((elem) =>
       introspectionResultObjects.includes(elem.name)
